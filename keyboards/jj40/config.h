@@ -39,6 +39,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAPPING_TOGGLE 3
 
+#define MOUSEKEY_DELAY             200
+#define MOUSEKEY_INTERVAL          20
+#define MOUSEKEY_MAX_SPEED         3
+#define MOUSEKEY_TIME_TO_MAX       15
+#define MOUSEKEY_WHEEL_MAX_SPEED   8
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
+
 #define NO_UART 1
 
 /* RGB underglow */
