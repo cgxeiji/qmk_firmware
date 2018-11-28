@@ -15,6 +15,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "config_common.h"
+
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -29,6 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 15
 
+/* COL2ROW or ROW2COL */
+#define DIODE_DIRECTION COL2ROW
+
+#define BACKLIGHT_LEVELS 12
+
 #define TAPPING_TOGGLE 3
 
 #define MOUSEKEY_DELAY             200
@@ -39,7 +46,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 40
 
 #define NO_UART 1
-#define BOOTLOADHID_BOOTLOADER 1
 
 /* key combination for command */
 #define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))

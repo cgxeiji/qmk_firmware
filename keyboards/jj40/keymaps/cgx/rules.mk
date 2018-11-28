@@ -24,23 +24,32 @@ NO_SUSPEND_POWER_DOWN = yes
 # processor frequency
 F_CPU = 12000000
 
+BOOTLOADER = bootloadHID
+
 # build options
 BOOTMAGIC_ENABLE = no
 MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = yes
+
 BACKLIGHT_ENABLE = no
+BACKLIGHT_CUSTOM_DRIVER = yes
+
 RGBLIGHT_ENABLE = no
-RGBLIGHT_CUSTOM_DRIVER = no
+RGBLIGHT_CUSTOM_DRIVER = yes
+
 KEY_LOCK_ENABLE = yes
 
+SLEEP_LED_ENABLE = no
+
 OPT_DEFS = -DDEBUG_LEVEL=0
-OPT_DEFS += -DBOOTLOADER_SIZE=2048
 
 # custom matrix setup
 CUSTOM_MATRIX = yes
-SRC = matrix.c i2c.c
+SRC = matrix.c i2c.c backlight.c
 
 # programming options
-PROGRAM_CMD = ./keyboards/jj40/program $(TARGET).hex
+PROGRAM_CMD = ./util/atmega32a_program.py $(TARGET).hex
+
+LAYOUTS = ortho_4x12 planck_mit
