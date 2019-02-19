@@ -100,17 +100,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |   S  |   N  |   T  |   D  |   ,  |   .  |   A  |   E  |   O  |   H  |  ;   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Alt  |   J  |   P  |   C  |   K  |   Q  |   Z  |   M  |   F  |   G  |   X  | Enter|
+ * | GUI  |   J  |   P  |   C  |   K  |   Q  |   Z  |   M  |   F  |   G  |   X  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Bksp | Win  | Del  | Esc  |Shift |Mouse |Number|Space | Alt  | VolD | VolU |Symbol|
+ * | Bksp | Win  | Del  | Esc  |Shift |Mouse |Number|Space | GUI  | VolD | VolU |Symbol|
  * `-----------------------------------------------------------------------------------'
  */
 
   [_CGX] = LAYOUT_ortho_4x12( \
   KC_TAB  , KC_W   , KC_L  , KC_R  , KC_B     , KC_GRV    , KC_PIPE , KC_Y  , KC_I   , KC_U   , KC_V   , KC_QUOT, \
   KC_LCTRL, KC_S   , KC_N  , KC_T  , KC_D     , KC_COMM   , KC_DOT  , KC_A  , KC_E   , KC_O   , KC_H   , KC_SCLN, \
-  KC_LALT , KC_J   , KC_P  , KC_C  , KC_K     , KC_Q      , KC_Z    , KC_M  , KC_F   , KC_G   , KC_X   , KC_ENT , \
-  KC_BSPC , KC_LGUI, KC_DEL, LCTL_T(KC_ESC), LSFT_T(KC_BSPC), TT(_MOUSE), TT(_NUM), LT(_NUM, KC_SPC), KC_LALT, KC_VOLD, KC_VOLU, TT(_SYM) \
+  KC_LGUI , KC_J   , KC_P  , KC_C  , KC_K     , KC_Q      , KC_Z    , KC_M  , KC_F   , KC_G   , KC_X   , KC_ENT , \
+  KC_BSPC , KC_RALT, KC_DEL, LCTL_T(KC_ESC), LSFT_T(KC_BSPC), TT(_MOUSE), TT(_NUM), LT(_NUM, KC_SPC), KC_LGUI, KC_VOLD, KC_VOLU, TT(_SYM) \
 ),
 
 /* Shift
@@ -133,19 +133,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Number
  * ,-----------------------------------------------------------------------------------.
- * |      |      |   <  |   >  |      |      |      |   7  |   8  |   9  |   -  |      |
+ * |      |   {  |   <  |   >  |   }  |      |      |   7  |   8  |   9  |   -  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |   (  |   [  |   ]  |   )  |      |      |   4  |   5  |   6  |   0  |  %   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   \  |   ~  |   ^  |   =  |      |      |   1  |   2  |   3  |   /  |      |
+ * |      |   \  |   ~  |   +  |   =  |      |      |   1  |   2  |   3  |   /  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_NUM] = LAYOUT_ortho_4x12( \
-  _______, _______, KC_LABK, KC_RABK, _______, _______, _______,    KC_7,    KC_8,    KC_9, KC_MINS, _______,\
+  _______, KC_LCBR, KC_LABK, KC_RABK, KC_RCBR, _______, _______,    KC_7,    KC_8,    KC_9, KC_MINS, _______,\
   _______, KC_LPRN, KC_LBRC, KC_RBRC, KC_RPRN, _______, _______,    KC_4,    KC_5,    KC_6,    KC_0, KC_PERC,\
-  _______, KC_BSLS, KC_TILD, KC_CIRC,  KC_EQL, _______, _______,    KC_1,    KC_2,    KC_3, KC_SLSH, _______,\
+  _______, KC_BSLS, KC_TILD, KC_PLUS,  KC_EQL, _______, _______,    KC_1,    KC_2,    KC_3, KC_SLSH, _______,\
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 ),
 
