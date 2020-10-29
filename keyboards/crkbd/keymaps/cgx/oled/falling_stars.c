@@ -5,6 +5,7 @@
 
 uint16_t anim_timer = 0;
 char anim[MAX_ANIM][6];
+bool active = false;
 
 void update_anim(uint8_t val) {
   char data[6] = "     \0";
